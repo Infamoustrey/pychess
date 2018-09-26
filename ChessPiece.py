@@ -6,5 +6,5 @@ class ChessPiece:
         self.col = col
         self.player = player
     
-    def display():
+    def display(self):
         return 'x'
