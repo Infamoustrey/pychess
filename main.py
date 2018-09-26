@@ -16,17 +16,21 @@ def switchPlayers(currentPlayer):
     return 
 
 def parseInput(input, isLookingAtHelp):
+
+    if input == 'c':
+        print('Closing Game...')
+        exit(0)
     
     if isLookingAtHelp:
         if input == 'q':
             isLookingAtHelp = False
         else: 
-            return
+            return 
+    elif parseMove(input):
+        return 
 
-    if input == 'c':
-        print('Closing Game')
-        exit(0)
- 
+def parseMove(input):
+    return 
 
 def displayHelp():
     
