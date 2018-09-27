@@ -1,0 +1,14 @@
+
+Help
+=================== 
+? - opens this help page
+q - closes this help page
+c - closes the program
+
+How to Play
+=================== 
+move {piece staring position} to {piece ending position} - moves a piece on the board
+    EX: move A2 to A4
+
+pass - skip your turn
+

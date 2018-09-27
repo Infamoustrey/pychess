@@ -50,21 +50,24 @@ class ChessBoard:
         
 
     def display(self):
-        print()
+        print('  A B C D E F G H')
+        
+        count = 1
         for row in self.board:
             line = ""
             for piece in row:
                 line += piece.display() + ' '
-            print(line)
+            print( str(count) + ' ' + line)
+            count += 1
 
     def move_piece(self, starting, ending, player):
 
-        if( not self.doesPieceExistAtLocation(starting) ):
+        if not self.doesPieceExistAtLocation(starting):
             return 'No Piece to move at that location, try another!'
-
-        if( not self.doesPieceAtLocationBelongToPlayer(starting, player) ):
+        elif not self.doesPieceAtLocationBelongToPlayer(starting, player) :
             return 'That piece is not yours to move!'
-
+        else:
+            return ''
     
     # Checks to see if a piece exists on the board at a given location
     def doesPieceExistAtLocation(self, starting):
