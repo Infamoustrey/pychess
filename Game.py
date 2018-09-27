@@ -1,7 +1,7 @@
 
 from ChessBoard import ChessBoard
 import re
- 
+
 class Game:
 
     def __init__(self):
@@ -53,7 +53,7 @@ class Game:
                 self.switchPlayers()
                 return  
         
-        # Check if the move command is valid, behold the power of regex
+        # Check if the move command is valid, (in he-man narrator's voice)BEHOLD REGEX: I HAVE THE POWER!
         # should match move {piece staring position} to {piece ending position}
         if re.match(r"move\s[a-hA-H][1-8]\sto\s[a-hA-H][1-8]", input):
             self.parseMove(input)
