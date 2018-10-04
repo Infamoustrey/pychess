@@ -80,9 +80,6 @@ class Game:
 
         self.inputErrorMessage = self.board.move_piece(startingPosition, endingPosition, self.currentPlayer)
 
-        print(self.inputErrorMessage)
-        exit(0)
-
 
 
 

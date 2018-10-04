@@ -1,4 +1,3 @@
-
 from ChessPiece import ChessPiece
 
 class Pawn(ChessPiece):
@@ -9,3 +8,19 @@ class Pawn(ChessPiece):
 
     def display(self):
         return 'p'
+
+    def canMoveTo(self, ending):
+        mod = 0
+        firstMove = False  
+        if self.player == 1:
+            mod = -1 
+            if row == 1:
+                firstMove = True
+        elif self.player == 2:
+            mod = 1
+            if row == 6:
+                firstMove = True
+        
+        
+        
+        

@@ -8,3 +8,6 @@ class ChessPiece:
     
     def display(self):
         return 'x'
+
+    def canMoveTo(self, ending):
+        return False

@@ -66,9 +66,15 @@ class ChessBoard:
             return 'No Piece to move at that location, try another!'
         elif not self.doesPieceAtLocationBelongToPlayer(starting, player) :
             return 'That piece is not yours to move!'
+        elif self.isMoveValid(starting, ending):
+            return 'Move not valid'
         else:
             return ''
     
+    # Checks to see if the move is valid
+    def isMoveValid(self, starting, ending):
+        return not self.board[ starting[0], starting[1] ].canMoveTo(ending)
+
     # Checks to see if a piece exists on the board at a given location
     def doesPieceExistAtLocation(self, starting):
         return self.board[ starting[0] ][ starting[1] ].__class__.__name__ != 'ChessPiece'
